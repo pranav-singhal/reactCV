@@ -1,21 +1,21 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button'
-
-export default class NavButton extends React.Component{
+import {withRouter} from 'react-router-dom'
+ class NavButton extends React.Component{
     state = {
         key: 'balue'
     }
 
-render(){
+     render(){
 
-    return (<>
+
+    return (
         <Button/>
-        <Button/>
-        </>
     )
 }
 }
-
+NavButton = withRouter(NavButton)
+export default NavButton
 
 
 
