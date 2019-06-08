@@ -53,7 +53,7 @@ import Work from './Work';
 // }
 
 const HomePage = ({component: Component, ...rest}) => {
-    return (<BrowserRouter>
+    return (
             <Route {...rest} render={(matchProps) => (
                 <Container>
                     <Row>
@@ -72,7 +72,7 @@ const HomePage = ({component: Component, ...rest}) => {
                             <Row className={'main-buttons'}>
                                 <Col md={12}>
 
-                                    <NavButton/>
+                                    <NavButton pageName={'education'}/>
                                     <NavButton/>
                                     <NavButton/>
                                 </Col>
@@ -81,6 +81,7 @@ const HomePage = ({component: Component, ...rest}) => {
                         </Col>
                     </Row>
                     <Row>
+                        inside here
                             <Component />
                     </Row>
 
@@ -88,7 +89,7 @@ const HomePage = ({component: Component, ...rest}) => {
 
             )}/>
 
-        </BrowserRouter>
+
 
 
     )

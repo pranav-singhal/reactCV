@@ -5,12 +5,16 @@ import {withRouter} from 'react-router-dom'
     state = {
         key: 'balue'
     }
+    handleClick = () => {
+        console.log("I was clicked")
+        this.props.history.push('/' + this.props.pageName)
+    }
 
      render(){
 
 
     return (
-        <Button/>
+        <Button onClick={this.handleClick}/>
     )
 }
 }
