@@ -11,7 +11,7 @@ const HomePage = ({component: Component, ...rest}) => {
             <Route {...rest} render={(matchProps) => (
                 <Container>
                     <Row>
-                        <Col md={2} className={'profile-image'}>
+                        <Col md={4} className={'profile-image '}>
                             <img src={profilePic}/>
                             <h6>Pranav Singhal</h6>
                             <h6>Physics Graduate</h6>
@@ -26,7 +26,7 @@ const HomePage = ({component: Component, ...rest}) => {
 
 
                         </Col>
-                        <Col md={10}>
+                        <Col md={8}>
                             <Row>
                                 <Col md={12}>
                                     <p className={'quote'}>
@@ -34,12 +34,15 @@ const HomePage = ({component: Component, ...rest}) => {
                                     </p>
                                 </Col>
                             </Row>
-                            <Row className={'main-buttons'}>
+                            <Row className={'main-buttons '} >
                                 <Col md={12}>
-
                                     <NavButton pageLink={''} pageName={'Home'}/>
                                     <NavButton pageLink={'education'} pageName={'Educational  Background'}/>
                                     <NavButton pageLink={'work-experience'} pageName={'Work Experience'}/>
+
+
+
+
                                     {/*add a link for  downloading CV*/}
                                 </Col>
                             </Row>
