@@ -10,8 +10,8 @@ const HomePage = ({component: Component, ...rest}) => {
     return (
             <Route {...rest} render={(matchProps) => (
                 <Container>
-                    <Row>
-                        <Col md={4} className={'profile-image '}>
+                    <Row className={'jumbotron'}>
+                        <Col md={3} className={'profile-image '}>
                             <img src={profilePic}/>
                             <h6>Pranav Singhal</h6>
                             <h6>Physics Graduate</h6>
@@ -26,7 +26,7 @@ const HomePage = ({component: Component, ...rest}) => {
 
 
                         </Col>
-                        <Col md={8}>
+                        <Col md={9}>
                             <Row>
                                 <Col md={12}>
                                     <p className={'quote'}>
@@ -34,19 +34,19 @@ const HomePage = ({component: Component, ...rest}) => {
                                     </p>
                                 </Col>
                             </Row>
-                            <Row className={'main-buttons '} >
-                                <Col md={12}>
-                                    <NavButton pageLink={''} pageName={'Home'}/>
-                                    <NavButton pageLink={'education'} pageName={'Educational  Background'}/>
-                                    <NavButton pageLink={'work-experience'} pageName={'Work Experience'}/>
+
+                        </Col>
+                    </Row>
+                    <Row className={'main-buttons '} >
+                        <Col md={12}>
+                            <NavButton pageLink={''} pageName={'Home'}/>
+                            <NavButton pageLink={'education'} pageName={'Educational  Background'}/>
+                            <NavButton pageLink={'work-experience'} pageName={'Work Experience'}/>
 
 
 
 
-                                    {/*add a link for  downloading CV*/}
-                                </Col>
-                            </Row>
-
+                            {/*add a link for  downloading CV*/}
                         </Col>
                     </Row>
                     <Row>

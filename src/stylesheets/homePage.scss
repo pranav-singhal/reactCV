@@ -12,13 +12,17 @@ body{
 
 
   .row{
-
+      &.jumbotron{
+        background-image: url("../assets/bg.jpg");
+        margin-bottom: 0rem !important;
+      }
 
           //border: 1px solid black;
-        .col-md-4{
+        .col-md-3{
+          color: white;
           img{
 
-            width: 95%;
+            width: 75%;
             border-radius: 50%;
             border: 4px solid black;
             display: block;
@@ -27,7 +31,7 @@ body{
           }
 
         }
-        .col-md-8{
+        .col-md-9{
           padding-top:10px;
           .quote{
 
@@ -35,10 +39,15 @@ body{
             font-style: italic;
             font-size: 2.8em;
           }
-          .main-buttons{
-            border: 1px solid black;
-          }
+
         }
 
     }
+  .main-buttons{
+    position: sticky;
+    top:  0;
+    z-index: 100;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+  }
 }

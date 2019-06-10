@@ -1,0 +1,45 @@
+.work-tab{
+  border-radius: 4px;
+  padding:10px 10px  10px  15px;
+
+
+  background-color: rgb(22, 100, 171);
+  margin-bottom: 20px;
+  transition: 0.5s;
+  &:hover{
+    box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s;
+    cursor: pointer;
+
+  }
+  h1{
+    text-align: left;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 28px;
+      width: 15px;
+      height:15px;
+      border-radius: 50%;
+      background: rgb(45, 129, 255);
+    }
+
+    color:  rgb(163, 218, 255);
+    font-family: 'Proxima Nova Soft','Proxima Nova','Helvetica Neue',Helvetica,Arial,sans-serif;
+
+  }
+  p{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    border-left: 1px solid rgb(163, 218, 255);
+    padding-left: 10px;
+
+
+
+
+
+
+  }
+}
