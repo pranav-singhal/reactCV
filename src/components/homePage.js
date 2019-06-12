@@ -13,7 +13,7 @@ const HomePage = ({component: Component, ...rest}) => {
                     <Row className={'jumbotron'}>
                         <Col md={3} className={'profile-image '}>
                             <img src={profilePic}/>
-                            <h6>Pranav Singhal</h6>
+                            <h6 className={'name'}>Pranav Singhal</h6>
                             <h6>Physics Graduate</h6>
                             <h6>Freelance Web Developer</h6>
                             <h6><i className="fas fa-phone"></i> +91-9650906992</h6>

@@ -1,35 +1,40 @@
-.work-tab{
+.work-tab {
   border-radius: 4px;
-  padding:10px 10px  10px  15px;
+  padding: 10px 10px 10px 15px;
 
 
   background-color: rgb(22, 100, 171);
   margin-bottom: 20px;
   transition: 0.5s;
-  &:hover{
+
+  &:hover {
     box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.5s;
     cursor: pointer;
 
   }
-  h1{
+
+  h1 {
     text-align: left;
-    &::before{
+
+    &::before {
       content: '';
       position: absolute;
       left: 10px;
       top: 28px;
       width: 15px;
-      height:15px;
+      height: 15px;
       border-radius: 50%;
       background: rgb(45, 129, 255);
     }
 
-    color:  rgb(163, 218, 255);
-    font-family: 'Proxima Nova Soft','Proxima Nova','Helvetica Neue',Helvetica,Arial,sans-serif;
+    color: rgb(163, 218, 255);
+    font-family: 'Proxima Nova Soft', 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   }
-  p{
+
+  p {
+    font-family: 'Roboto', sans-serif;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
@@ -37,9 +42,95 @@
     padding-left: 10px;
 
 
+  }
+
+}
+
+.work-modal {
+  width: 100vw;
+  z-index: 2;
+  position: fixed;
+  padding-top: 25vh;
+  padding-bottom: 25vh;
+  top: 0;
+  left: 0;
+  background: rgba(240, 248, 255, 0.73);
+
+  .container{
+    .work-links{
+      div{
+        margin-left: 10px;
+        i{
+          font-size: 4em;
+          margin-right: 10px;
+        }
+      }
+
+    }
+    height: 50vh;
+    overflow: scroll;
+    .close {
+      float: right;
+      padding-top: 8px;
+      position: sticky;
+      top: 4px;
+      z-index: 3;
+
+    }
+  }
+  //background-color: rgba(128, 128, 128, 1);
+
+  .header {
 
 
 
+
+
+
+
+    h1 {
+      float: left;
+      margin-left: 10px;
+      font-size: 4em;
+      padding-top: 10px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid grey;
+
+    }
 
   }
+
+  .description {
+    p{
+      margin-top: 20px;
+      padding-left: 10px;
+
+      font-family: 'Poppins', sans-serif;
+      border-left: 1px solid grey;
+
+    }
+  }
+
 }
+
+.work-description-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.work-description-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.work-description-exit {
+  opacity: 1;
+}
+
+.work-description-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+

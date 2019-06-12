@@ -13,7 +13,7 @@ render(){
 
             <Col md={6}>
 
-                    <WorkTab/>
+                    <WorkTab title={'Split Me Up'}/>
             </Col>
 
 
