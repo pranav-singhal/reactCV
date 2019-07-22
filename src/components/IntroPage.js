@@ -2,9 +2,23 @@ import React from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from "react-bootstrap/Col";
 import '../stylesheets/IntroPage.scss';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default class IntroPage extends React.Component {
+    state={
+        sliderSettings: {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }
+
+    }
     render() {
+
         return (
             <Row>
                 <Col md={12}>
@@ -12,19 +26,8 @@ export default class IntroPage extends React.Component {
                     <Row>
                         <Col md={{span: 10, offset: 1}}>
                             <p className={'intro-paragraph'}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget neque in sapien
-                                tempus sodales.
-                                Aliquam sagittis tortor mi, ornare euismod tortor congue sed. Curabitur nec pharetra
-                                libero, et eleifend enim.
-                                In ac iaculis nunc, quis faucibus nisl. Quisque ullamcorper id arcu quis feugiat.
-                                Vestibulum sapien libero,
-                                molestie aliquet tincidunt eget, convallis a quam. Nunc eget sem eu sem varius interdum.
-                                Aliquam et dictum mi,
-                                a euismod ligula. Nunc ex metus, dapibus vel lectus finibus, varius viverra tellus. Nam
-                                mi mi, elementum non
-                                condimentum vel, iaculis vitae justo. Fusce viverra, ligula in scelerisque gravida, dui
-                                justo malesuada neque,
-                                ac lacinia nunc erat in orci. Donec sit amet nulla nisi. In ac efficitur eros
+                                Hi, I'm Pranav Singhal. I like to read, play guitar and occasionally work. Currently, I'm working as a blockchain
+                                intern at Turing Labs - specialising in front-end.
                             </p>
                         </Col>
                     </Row>
@@ -37,11 +40,48 @@ export default class IntroPage extends React.Component {
 
                     <Row>
                         <Col md={{span: 10, offset: 1}}>
-                            <p style={{'text-align':'center'}}>
-                                Show 5 recent tweets
-                            </p>
+
+
+                            <Slider {...this.state.sliderSettings}>
+
+                                <div className={'tweets'}>
+                                    <blockquote className="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">Nothing
+                                        wrong with contradicting yourself in what you say. <a
+                                            href="https://t.co/0v0hXojsc8">https://t.co/0v0hXojsc8</a></p>&mdash; Pranav singhal
+                                        (@_pranav_singhal) <a
+                                            href="https://twitter.com/_pranav_singhal/status/1136902909570953216?ref_src=twsrc%5Etfw">June
+                                            7, 2019</a></blockquote>
+
+                                </div>
+
+                                <div className={'tweets'}>
+                                    <blockquote className="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">Nothing
+                                        wrong with contradicting yourself in what you say. <a
+                                            href="https://t.co/0v0hXojsc8">https://t.co/0v0hXojsc8</a></p>&mdash; Pranav singhal
+                                        (@_pranav_singhal) <a
+                                            href="https://twitter.com/_pranav_singhal/status/1136902909570953216?ref_src=twsrc%5Etfw">June
+                                            7, 2019</a></blockquote>
+
+                                </div>
+
+                            </Slider>
+
+
+
+
+
+
+
+
+
+
+
+
 
                         </Col>
+                    </Row>
+                    <Row>
+                        another paragraph
                     </Row>
                 </Col>
             </Row>

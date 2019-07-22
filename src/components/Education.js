@@ -62,8 +62,8 @@ render(){
                     Sri Venkateswara College
                 </td>
                 <td>
-                    8.5
-                    <span> for five semesters</span>
+                    7.25
+
                 </td>
                 <td>
                     May 2019

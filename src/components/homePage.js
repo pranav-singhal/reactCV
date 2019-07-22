@@ -9,9 +9,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const HomePage = ({component: Component, ...rest}) => {
     return (
             <Route {...rest} render={(matchProps) => (
-                <Container>
+                <Container className={'container-fluid'}>
                     <Row className={'jumbotron'}>
-                        <Col md={3} className={'profile-image '}>
+                        <Col md={4} className={'profile-image '}>
                             <img src={profilePic}/>
                             <h6 className={'name'}>Pranav Singhal</h6>
                             <h6>Physics Graduate</h6>
@@ -26,7 +26,7 @@ const HomePage = ({component: Component, ...rest}) => {
 
 
                         </Col>
-                        <Col md={9}>
+                        <Col md={8} className={'quote-container'}>
                             <Row>
                                 <Col md={12}>
                                     <p className={'quote'}>
@@ -34,21 +34,28 @@ const HomePage = ({component: Component, ...rest}) => {
                                     </p>
                                 </Col>
                             </Row>
+                            <Row className={'main-buttons '} >
+                                <Col md={12}>
+                                    <Row>
+                                    <Col md={4} sm={4}>
+                                    <NavButton pageLink={''} pageName={'About'}/>
+                                    </Col>
+                                    <Col md={4} sm={4}>
+                                    <NavButton pageLink={'education'} pageName={'Education'}/>
+                                    </Col>
+                                    <Col md={4} sm={4}>
+                                    <NavButton pageLink={'work-experience'} pageName={'Work'}/>
+                                    </Col>
+                                    </Row>
+
+
+                                    {/*add a link for  downloading CV*/}
+                                </Col>
+                            </Row>
 
                         </Col>
                     </Row>
-                    <Row className={'main-buttons '} >
-                        <Col md={12}>
-                            <NavButton pageLink={''} pageName={'Home'}/>
-                            <NavButton pageLink={'education'} pageName={'Educational  Background'}/>
-                            <NavButton pageLink={'work-experience'} pageName={'Work Experience'}/>
 
-
-
-
-                            {/*add a link for  downloading CV*/}
-                        </Col>
-                    </Row>
                     <Row>
                         <Col md={12}>
 

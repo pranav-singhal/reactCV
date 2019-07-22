@@ -32,6 +32,12 @@ render(){
             <Col md={6}>
                 <WorkTab/>
             </Col>
+            <Col md={6}>
+                <WorkTab/>
+            </Col>
+            <Col md={6}>
+                <WorkTab/>
+            </Col>
         </Row>
 
 
